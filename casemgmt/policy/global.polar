@@ -1,8 +1,8 @@
 ## Global permissions assigned to users
 
 ### Allow superusers/staff to view everything
-allow(user: casemgmt::User, _action, _resource) if
-    user.is_staff;
+# allow(user: casemgmt::User, _action, _resource) if
+#     user.is_staff;
 
 ### User has access if has permission through direct permission assignment
 global_allow(user: casemgmt::User, action: String, _resource: casemgmt::Caseload) if
