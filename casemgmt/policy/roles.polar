@@ -6,7 +6,7 @@
 rbac_allow(user, action, resource) if
     # First, check whether user has a direct role
     # or a role from an associated resource
-    # resource_role_applies_to(resource, role_resource) and
+    resource_role_applies_to(resource, role_resource) and
     user_in_role(user, role, resource) and
     role_allow(role, action, resource);
 
